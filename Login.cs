@@ -54,7 +54,7 @@ namespace Dream11
                 else
                 {
                     dr.Close();
-                    MessageBox.Show("No account avilable with this username and password ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("No Account avilable with this username and password ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

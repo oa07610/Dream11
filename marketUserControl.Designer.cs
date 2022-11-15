@@ -1,6 +1,6 @@
 ﻿namespace Dream11
 {
-    partial class clubsUserControl
+    partial class marketUserControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -33,21 +33,26 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Poppins ExtraBold", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(245, 305);
+            this.label1.Font = new System.Drawing.Font("Poppins", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(346, 305);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(563, 141);
+            this.label1.Size = new System.Drawing.Size(361, 141);
             this.label1.TabIndex = 0;
-            this.label1.Text = "MAN CITY!!!";
+            this.label1.Text = "Gareeb";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // clubsUserControl
+            // marketUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))));
             this.Controls.Add(this.label1);
-            this.Name = "clubsUserControl";
+            this.Name = "marketUserControl";
             this.Size = new System.Drawing.Size(1053, 751);
+            this.Load += new System.EventHandler(this.marketUserControl_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
