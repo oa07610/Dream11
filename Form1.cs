@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace Dream11
 {
@@ -15,11 +16,16 @@ namespace Dream11
         public static string userName = Login.userName;
         public static string pass = Login.pass;
 
+        public static SoundPlayer sp;
+
         public Form1()
         {
             InitializeComponent();
             profileUserControl uc = new profileUserControl();
             addUserControl(uc);
+
+            sp = new SoundPlayer("waka.wav");
+            sp.Play();
         }
 
         private void addUserControl(UserControl userControl)
@@ -48,7 +54,7 @@ namespace Dream11
 
         private void button3_Click(object sender, EventArgs e)
         {
-            marketUserControl uc = new marketUserControl();
+            pmarketUserControl uc = new pmarketUserControl();
             addUserControl(uc);
         }
 
@@ -60,7 +66,7 @@ namespace Dream11
 
         private void button8_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Database Systems project developed by Owees17, Chandani, hammadxsajid. DBS L5. Miss Saba OP.", "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Database systems project developed by Owais Aijaz, Hammad Sajid and Kushal Chandani.", "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -79,13 +85,19 @@ namespace Dream11
         {
             if (MessageBox.Show("Do you want to exit?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                Close();
+                System.Windows.Forms.Application.Exit();
             }
         }
 
         private void panelContainer_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            settingsUserControl uc = new settingsUserControl();
+            addUserControl(uc);
         }
     }
 }
