@@ -27,11 +27,6 @@ namespace Dream11
             sp = new SoundPlayer("waka.wav");
             sp.Play();
         }
-
-        private void check()
-        {
-
-        }
         private void addUserControl(UserControl userControl)
         {
             userControl.Dock = DockStyle.Fill;
