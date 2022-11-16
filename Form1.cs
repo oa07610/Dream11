@@ -28,6 +28,10 @@ namespace Dream11
             sp.Play();
         }
 
+        private void check()
+        {
+
+        }
         private void addUserControl(UserControl userControl)
         {
             userControl.Dock = DockStyle.Fill;
