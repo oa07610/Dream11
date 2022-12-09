@@ -15,7 +15,6 @@ namespace Dream11
     {
         public static string userName = Login.userName;
         public static string pass = Login.pass;
-
         public static SoundPlayer sp;
 
         public Form1()
@@ -30,7 +29,6 @@ namespace Dream11
         private void addUserControl(UserControl userControl)
         {
             userControl.Dock = DockStyle.Fill;
-            panelContainer.Controls.Clear();
             panelContainer.Controls.Add(userControl);
             userControl.BringToFront();
         }
@@ -97,6 +95,11 @@ namespace Dream11
         {
             settingsUserControl uc = new settingsUserControl();
             addUserControl(uc);
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

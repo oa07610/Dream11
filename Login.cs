@@ -13,6 +13,7 @@ namespace Dream11
 {
     public partial class Login : Form
     {
+        static SqlConnection con = new SqlConnection(@"Data Source=ABYSS\DBS;Initial Catalog=Dream11;Integrated Security=True");
         public static string userName;
         public static string pass;
 
@@ -32,7 +33,6 @@ namespace Dream11
             userName = txtusername.Text;
             pass = txtpassword.Text;
 
-            SqlConnection con = new SqlConnection(@"Data Source=ABYSS\DBS;Initial Catalog=test;Integrated Security=True");
             con.Open();
 
             if (string.IsNullOrEmpty(userName) || string.IsNullOrEmpty(pass))
@@ -41,7 +41,7 @@ namespace Dream11
             }
             else
             {
-                SqlCommand cmd = new SqlCommand("select * from test_login where username='" + userName + "' and password='" + pass + "'", con);
+                SqlCommand cmd = new SqlCommand("select * from userInfo where username='" + userName + "' and password='" + pass + "'", con);
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.Read())
                 {
@@ -54,7 +54,8 @@ namespace Dream11
                 else
                 {
                     dr.Close();
-                    MessageBox.Show("No account avilable with this username and password ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    con.Close();
+                    MessageBox.Show("No account available with this username and password ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

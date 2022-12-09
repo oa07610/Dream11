@@ -44,6 +44,9 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.txtTeam = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,12 +69,13 @@
             this.label1.Size = new System.Drawing.Size(303, 106);
             this.label1.TabIndex = 1;
             this.label1.Text = "Dream11";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Poppins ExtraLight", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(83, 152);
+            this.label2.Location = new System.Drawing.Point(83, 146);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 23);
             this.label2.TabIndex = 2;
@@ -81,7 +85,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Poppins ExtraLight", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(84, 235);
+            this.label3.Location = new System.Drawing.Point(84, 275);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 23);
             this.label3.TabIndex = 3;
@@ -92,7 +96,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Poppins ExtraLight", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(81, 324);
+            this.label4.Location = new System.Drawing.Point(81, 339);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(137, 23);
             this.label4.TabIndex = 4;
@@ -101,7 +105,7 @@
             // txtusername
             // 
             this.txtusername.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtusername.Location = new System.Drawing.Point(84, 178);
+            this.txtusername.Location = new System.Drawing.Point(84, 174);
             this.txtusername.Name = "txtusername";
             this.txtusername.Size = new System.Drawing.Size(295, 15);
             this.txtusername.TabIndex = 5;
@@ -109,7 +113,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(0)))), ((int)(((byte)(39)))));
-            this.panel1.Location = new System.Drawing.Point(80, 205);
+            this.panel1.Location = new System.Drawing.Point(80, 197);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(300, 1);
             this.panel1.TabIndex = 6;
@@ -117,7 +121,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(0)))), ((int)(((byte)(39)))));
-            this.panel2.Location = new System.Drawing.Point(82, 288);
+            this.panel2.Location = new System.Drawing.Point(82, 324);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(300, 1);
             this.panel2.TabIndex = 9;
@@ -125,7 +129,7 @@
             // txtpassword
             // 
             this.txtpassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtpassword.Location = new System.Drawing.Point(84, 261);
+            this.txtpassword.Location = new System.Drawing.Point(84, 301);
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.Size = new System.Drawing.Size(295, 15);
             this.txtpassword.TabIndex = 8;
@@ -133,7 +137,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(0)))), ((int)(((byte)(39)))));
-            this.panel3.Location = new System.Drawing.Point(80, 377);
+            this.panel3.Location = new System.Drawing.Point(80, 388);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(300, 1);
             this.panel3.TabIndex = 12;
@@ -141,7 +145,7 @@
             // txtconfirmpassword
             // 
             this.txtconfirmpassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtconfirmpassword.Location = new System.Drawing.Point(84, 350);
+            this.txtconfirmpassword.Location = new System.Drawing.Point(84, 365);
             this.txtconfirmpassword.Name = "txtconfirmpassword";
             this.txtconfirmpassword.Size = new System.Drawing.Size(295, 15);
             this.txtconfirmpassword.TabIndex = 11;
@@ -187,7 +191,7 @@
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Poppins ExtraLight", 7.8F);
-            this.checkBox1.Location = new System.Drawing.Point(236, 392);
+            this.checkBox1.Location = new System.Drawing.Point(236, 403);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(141, 27);
             this.checkBox1.TabIndex = 15;
@@ -195,12 +199,42 @@
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(0)))), ((int)(((byte)(39)))));
+            this.panel4.Location = new System.Drawing.Point(81, 260);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(300, 1);
+            this.panel4.TabIndex = 18;
+            // 
+            // txtTeam
+            // 
+            this.txtTeam.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTeam.Location = new System.Drawing.Point(83, 237);
+            this.txtTeam.Name = "txtTeam";
+            this.txtTeam.Size = new System.Drawing.Size(295, 15);
+            this.txtTeam.TabIndex = 17;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Poppins ExtraLight", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(83, 211);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(79, 23);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "TEAM NAME";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
             // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(462, 590);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.txtTeam);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button2);
@@ -217,6 +251,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Registration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registration";
@@ -244,5 +279,8 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.TextBox txtTeam;
+        private System.Windows.Forms.Label label6;
     }
 }

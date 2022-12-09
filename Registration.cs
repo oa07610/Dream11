@@ -13,6 +13,7 @@ namespace Dream11
 {
     public partial class Registration : Form
     {
+        static SqlConnection con = new SqlConnection(@"Data Source=ABYSS\DBS;Initial Catalog=Dream11;Integrated Security=True");
         public Registration()
         {
             InitializeComponent();
@@ -44,13 +45,13 @@ namespace Dream11
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string userName, pass, confirmPass;
+            string userName, team, pass, confirmPass;
 
             userName = txtusername.Text;
+            team = txtTeam.Text;
             pass = txtpassword.Text;
             confirmPass = txtconfirmpassword.Text;
 
-            SqlConnection con = new SqlConnection(@"Data Source=ABYSS\DBS;Initial Catalog=test;Integrated Security=True");
             con.Open();
 
             if (string.IsNullOrEmpty(userName) || string.IsNullOrEmpty(pass) || string.IsNullOrEmpty(confirmPass))
@@ -61,7 +62,7 @@ namespace Dream11
             {
                 if (pass == confirmPass)
                 {
-                    SqlCommand cmd = new SqlCommand("select * from test_login where username='" + userName + "'", con);
+                    SqlCommand cmd = new SqlCommand("select * from userInfo where userName = '" + userName + "'", con);
                     SqlDataReader dr = cmd.ExecuteReader();
                     if (dr.Read())
                     {
@@ -71,7 +72,7 @@ namespace Dream11
                     else
                     {
                         dr.Close();
-                        cmd = new SqlCommand(@"Insert into test_login(username, password) values('" + userName + "', '" + pass + "')", con);
+                        cmd = new SqlCommand(@"Insert into userInfo(username, password, teamName, userBudget, teamRating) values('" + userName + "', '" + pass + "', '" + team + "', 4000000, 00)", con);
                         try
                         { 
                             cmd.ExecuteNonQuery();
@@ -87,7 +88,6 @@ namespace Dream11
                             con.Close();
                         }
                     }
-                        
                 }
                 else
                 {
@@ -108,6 +108,16 @@ namespace Dream11
                 txtpassword.UseSystemPasswordChar = true;
                 txtconfirmpassword.UseSystemPasswordChar = true;
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Dream11DataSet" targetNamespace="http://tempuri.org/Dream11DataSet.xsd" xmlns:mstns="http://tempuri.org/Dream11DataSet.xsd" xmlns="http://tempuri.org/Dream11DataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection ConnectionStringObject="Data Source=ABYSS\DBS;Initial Catalog=Dream11;Integrated Security=True" IsAppSettingsProperty="false" Modifier="Assembly" Name="abyss\dbs.Dream11.dbo" ParameterPrefix="@" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="playerInfoTableAdapter" GeneratorDataComponentClassName="playerInfoTableAdapter" Name="playerInfo" UserDataComponentName="playerInfoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="abyss\dbs.Dream11.dbo" DbObjectName="Dream11.dbo.playerInfo" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT firstName, lastName, position, rating, playerPrice, nationality, pace, physique, shoot FROM dbo.playerInfo</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="firstName" DataSetColumn="firstName" />
+              <Mapping SourceColumn="lastName" DataSetColumn="lastName" />
+              <Mapping SourceColumn="position" DataSetColumn="position" />
+              <Mapping SourceColumn="rating" DataSetColumn="rating" />
+              <Mapping SourceColumn="playerPrice" DataSetColumn="playerPrice" />
+              <Mapping SourceColumn="nationality" DataSetColumn="nationality" />
+              <Mapping SourceColumn="pace" DataSetColumn="pace" />
+              <Mapping SourceColumn="physique" DataSetColumn="physique" />
+              <Mapping SourceColumn="shoot" DataSetColumn="shoot" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Dream11DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="Dream11DataSet" msprop:Generator_DataSetName="Dream11DataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="playerInfo" msprop:Generator_RowEvHandlerName="playerInfoRowChangeEventHandler" msprop:Generator_RowDeletedName="playerInfoRowDeleted" msprop:Generator_RowDeletingName="playerInfoRowDeleting" msprop:Generator_RowEvArgName="playerInfoRowChangeEvent" msprop:Generator_TablePropName="playerInfo" msprop:Generator_RowChangedName="playerInfoRowChanged" msprop:Generator_RowChangingName="playerInfoRowChanging" msprop:Generator_TableClassName="playerInfoDataTable" msprop:Generator_RowClassName="playerInfoRow" msprop:Generator_TableVarName="tableplayerInfo" msprop:Generator_UserTableName="playerInfo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="firstName" msprop:Generator_ColumnPropNameInRow="firstName" msprop:Generator_ColumnPropNameInTable="firstNameColumn" msprop:Generator_ColumnVarNameInTable="columnfirstName" msprop:Generator_UserColumnName="firstName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="lastName" msprop:Generator_ColumnPropNameInRow="lastName" msprop:Generator_ColumnPropNameInTable="lastNameColumn" msprop:Generator_ColumnVarNameInTable="columnlastName" msprop:Generator_UserColumnName="lastName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="position" msprop:Generator_ColumnPropNameInRow="position" msprop:Generator_ColumnPropNameInTable="positionColumn" msprop:Generator_ColumnVarNameInTable="columnposition" msprop:Generator_UserColumnName="position" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="rating" msprop:Generator_ColumnPropNameInRow="rating" msprop:Generator_ColumnPropNameInTable="ratingColumn" msprop:Generator_ColumnVarNameInTable="columnrating" msprop:Generator_UserColumnName="rating" type="xs:int" />
+              <xs:element name="playerPrice" msprop:Generator_ColumnPropNameInRow="playerPrice" msprop:Generator_ColumnPropNameInTable="playerPriceColumn" msprop:Generator_ColumnVarNameInTable="columnplayerPrice" msprop:Generator_UserColumnName="playerPrice" type="xs:int" minOccurs="0" />
+              <xs:element name="nationality" msprop:Generator_ColumnPropNameInRow="nationality" msprop:Generator_ColumnPropNameInTable="nationalityColumn" msprop:Generator_ColumnVarNameInTable="columnnationality" msprop:Generator_UserColumnName="nationality" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pace" msprop:Generator_ColumnPropNameInRow="pace" msprop:Generator_ColumnPropNameInTable="paceColumn" msprop:Generator_ColumnVarNameInTable="columnpace" msprop:Generator_UserColumnName="pace" type="xs:int" minOccurs="0" />
+              <xs:element name="physique" msprop:Generator_ColumnPropNameInRow="physique" msprop:Generator_ColumnPropNameInTable="physiqueColumn" msprop:Generator_ColumnVarNameInTable="columnphysique" msprop:Generator_UserColumnName="physique" type="xs:int" minOccurs="0" />
+              <xs:element name="shoot" msprop:Generator_ColumnPropNameInRow="shoot" msprop:Generator_ColumnPropNameInTable="shootColumn" msprop:Generator_ColumnVarNameInTable="columnshoot" msprop:Generator_UserColumnName="shoot" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

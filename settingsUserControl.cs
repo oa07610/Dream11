@@ -44,5 +44,10 @@ namespace Dream11
                 Form1.sp.Stop();
             }
         }
+
+        private void settingsUserControl_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
